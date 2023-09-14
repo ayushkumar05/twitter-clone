@@ -2,8 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "predeploy" : "npm run build",
-  "deploy" : "gh-pages -d build",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -24,9 +22,12 @@
     "redux-persist": "^6.0.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://ayushkumar05.github.io/twitter-clone/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,6 +52,5 @@
   "proxy": "https://unusual-lion-beret.cyclic.cloud",
   "devDependencies": {
     "gh-pages": "^6.0.0"
-  },
-
+  }
 }
