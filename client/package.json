@@ -2,6 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "predeploy" : "npm run build",
+  "deploy" : "gh-pages -d build",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -46,5 +48,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/api"
+  "proxy": "https://unusual-lion-beret.cyclic.cloud",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  },
+
 }
