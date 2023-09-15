@@ -12,6 +12,7 @@ const MainTweet = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      axios.defaults.withCredentials = true;
       const submitTweet = await axios.post("https://twitterclone-x51g.onrender.com/api/tweets", {
         userId: currentUser._id,
         description: tweetText,

@@ -20,6 +20,7 @@ const Signin = () => {
     try {
       const res = await axios.post("https://twitterclone-x51g.onrender.com/api/auth/signin", { username, password });
       dispatch(loginSuccess(res.data));
+      console.log('logged in')
       navigate("/");
     } catch (err) {
       dispatch(loginFailed());
