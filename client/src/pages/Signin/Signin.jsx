@@ -18,7 +18,7 @@ const Signin = () => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post("https://unusual-lion-beret.cyclic.cloud/auth/signin", { username, password });
+      const res = await axios.post("https://twitterclone-x51g.onrender.com/api/auth/signin", { username, password });
       dispatch(loginSuccess(res.data));
       navigate("/");
     } catch (err) {
