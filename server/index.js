@@ -21,10 +21,7 @@ const connect = () => {
       throw err;
     });
 };
-app.use(cors({
-  credentials:true,
-  withCredentials:true
-}));
+app.use(cors({credentials: true, origin: 'https://ayushkumar05.github.io/'}));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/users", userRoutes);
