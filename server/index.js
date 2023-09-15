@@ -6,10 +6,10 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auths.js";
 import tweetRoutes from "./routes/tweets.js";
+import cors from 'cors';
 
 const app = express();
 dotenv.config();
-const cors= require('cors')
 const connect = () => {
   mongoose.set("strictQuery", false);
   mongoose
