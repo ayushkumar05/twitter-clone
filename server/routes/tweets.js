@@ -8,13 +8,10 @@ import {
   getUserTweets,
   getExploreTweets,
 } from "../controllers/tweet.js";
-import cors from "cors";
 const router = express.Router();
-const corsOptions = {
-  origin: ['https://ayushkumar05.github.io', 'http://192.168.29.52:3000/'],
-};
+
 // Create a Tweet
-router.post("/",cors(corsOptions), verifyToken, createTweet);
+router.post("/", verifyToken, createTweet);
 
 // Delete a Tweet
 router.delete("/:id", verifyToken, deleteTweet);
