@@ -8,7 +8,7 @@ import authRoutes from "./routes/auths.js";
 import tweetRoutes from "./routes/tweets.js";
 const app = express();
 dotenv.config();
-var cors = require('cors')
+const cors= require('cors')
 const connect = () => {
   mongoose.set("strictQuery", false);
   mongoose
