@@ -21,11 +21,9 @@ const connect = () => {
       throw err;
     });
 };
-var corsOptions = {
-  origin: 'http://192.168.29.52:3000/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/users", userRoutes);

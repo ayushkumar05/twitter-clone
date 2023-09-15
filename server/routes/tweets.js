@@ -8,11 +8,11 @@ import {
   getUserTweets,
   getExploreTweets,
 } from "../controllers/tweet.js";
-
+import cors from "cors";
 const router = express.Router();
 
 // Create a Tweet
-router.post("/", verifyToken, createTweet);
+router.post("/", verifyToken, createTweet,);
 
 // Delete a Tweet
 router.delete("/:id", verifyToken, deleteTweet);
